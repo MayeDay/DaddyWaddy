@@ -38,13 +38,12 @@ router.get("/order/:id", (req, res)=>{
 });
 
 //Post Function for creating a new order after the user has logged in their user _id should be displayed in the 
-//the search bar JSON parameters need for this are orderOption, paymentMethod, and amount
+//the search bar JSON parameters need for this are name, and quantity
 //needs updating
 router.post("/order/product/:userId", (req, res, next)=>{
   
     
     produce.findOne({name: req.body.name}, (err, item)=>{  
-        var totalPrice = item.get("price") * req.body.amount;
         console.log("Inputed information: " + item);
 
         userModel.findById({_id: req.params.userId}).then((person) =>{
@@ -53,7 +52,7 @@ router.post("/order/product/:userId", (req, res, next)=>{
 
                 item: item,
                
-                quantity: req.body.amount,
+                quantity: req.body.quantity,
                 userId: req.params.userId
             })
            
@@ -80,13 +79,21 @@ router.post("/cart/:id", (req, res)=>{
         if(err){
             res.send(err);
         }else{
+            var totalPrice = 0
+           order.forEach((item)=>{
+            var cost = item.item.price;
+            var quantity = item.quantity;
+            var itemTotal = cost * quantity;
+            totalPrice = totalPrice + itemTotal;
+           })
+
             cart = new cartModel({
                 orders: order,
                 date: date,
                 time: time,
                 Total_Price: totalPrice,
-                Dining_Option: req.body.orderOption,
-                Payment_Method: req.body.paymentMethod,
+                Dining_Option: req.body.Dining_Option,
+                Payment_Method: req.body.Payment_Method,
                 
             })
            cart.save();
