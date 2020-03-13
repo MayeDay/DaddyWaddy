@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//Information for the user
 const userSchema = mongoose.Schema({
 
     firstname: String,
@@ -9,4 +10,5 @@ const userSchema = mongoose.Schema({
     password: String
 })
 
+//exports the model of the schema
 module.exports = mongoose.model("users", userSchema);

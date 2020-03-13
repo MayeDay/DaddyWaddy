@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//creates a Schema for products
 exports = productSchema = mongoose.Schema({
    
     category: String,
@@ -10,5 +11,7 @@ exports = productSchema = mongoose.Schema({
 
 })
 
+//exports the model of the product schema
 module.exports.model = mongoose.model("prod-dbs", productSchema);
+//exports the product schema
 module.exports.Schema = productSchema;

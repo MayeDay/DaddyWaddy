@@ -1,22 +1,28 @@
+//import need modules
 const express = require("express");
 const router = express.Router();
 const http = require("http");
 
 const mongoose = require("mongoose");
 
+//Imports created Models for the mongoDB being used
 const orderModel = require("../models/OrderModel");
 const productModel = require("../models/ProductModel");
 const cartModel = require("../models/CartSchema");
 const userModel = require("../models/UserSchema");
+
+//assigns the model of product to a variable
 const produce = productModel.model;
+
+//Saves the user information knowing what user is logged in
 var accountLoggedInto = mongoose.Document;
-var userId = 0;
 
 
+//Get Function for getting a product Provide the Product _id in the search bar
+//May need to be updated
 router.get("/product/:id", (req, res)=>{
     produce.findById({_id: req.params.id}).then((product)=>{
-        const price = product.get("price").toString();
-        res.send(price);
+        res.send(product);
       
         
     }).catch(err =>{
@@ -24,16 +30,18 @@ router.get("/product/:id", (req, res)=>{
     })
 });
 
+//Get Function for finding orders by inputing the order _id into the search bar
 router.get("/order/:id", (req, res)=>{
     orderModel.findById({_id: req.params.id}).then((order)=>{
         res.send(order);
     })
 });
 
+//Post Function for creating a new order after the user has logged in their user _id should be displayed in the 
+//the search bar JSON parameters need for this are orderOption, paymentMethod, and amount
+//needs updating
 router.post("/order/product/:userId", (req, res, next)=>{
-    var today = new Date();
-    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  
     
     produce.findOne({name: req.body.name}, (err, item)=>{  
         var totalPrice = item.get("price") * req.body.amount;
@@ -44,11 +52,7 @@ router.post("/order/product/:userId", (req, res, next)=>{
             addOrder = new orderModel({
 
                 item: item,
-                date: date,
-                time: time,
-                Total_Price: totalPrice,
-                Dining_Option: req.body.orderOption,
-                Payment_Method: req.body.paymentMethod,
+               
                 quantity: req.body.amount,
                 userId: req.params.userId
             })
@@ -64,13 +68,25 @@ router.post("/order/product/:userId", (req, res, next)=>{
     })
 })
 
+//Post funtion for adding user orders to the cart after they are finished provide the user _id in the search 
+//bar to add all that users orders into the cart then provide the following JSON data 
+// orderOption and paymentMethod
 router.post("/cart/:id", (req, res)=>{
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    
     orderModel.find({userId: req.params.id}, (err, order)=>{
         if(err){
             res.send(err);
         }else{
             cart = new cartModel({
-                orders: order
+                orders: order,
+                date: date,
+                time: time,
+                Total_Price: totalPrice,
+                Dining_Option: req.body.orderOption,
+                Payment_Method: req.body.paymentMethod,
                 
             })
            cart.save();
@@ -79,6 +95,8 @@ router.post("/cart/:id", (req, res)=>{
     }) 
 })
 
+//Post Funtion to login provide the email and password that is inside the users Collection in MongoDB inside of 
+//JSON format
 router.post("/login", (req, res) =>{
 
     userModel.findOne({email: req.body.email, password: req.body.password}, (err, person)=>{
@@ -94,6 +112,7 @@ router.post("/login", (req, res) =>{
     })
 })
 
+//Creating a new user provide the following in JSON format firstname, lastname, contactnumber, email, password
 router.post("/newuser", (req, res)=>{
     
     const person = new userModel({
@@ -107,6 +126,8 @@ router.post("/newuser", (req, res)=>{
     res.send(person);
 })
 
+//Creating a new Product provide the following in JSON format category, name, description, price and rating
+//needs updating
 router.post("/newProduct", (req, res)=>{
     product = new produce({
         category: req.body.category,
