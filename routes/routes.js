@@ -24,16 +24,11 @@ router.get("/product/:id", (req, res)=>{
     })
 });
 
-
-
 router.get("/order/:id", (req, res)=>{
     orderModel.findById({_id: req.params.id}).then((order)=>{
         res.send(order);
     })
 });
-
-
-
 
 router.post("/order/product/:userId", (req, res, next)=>{
     var today = new Date();
