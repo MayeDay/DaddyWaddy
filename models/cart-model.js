@@ -1,9 +1,8 @@
 const moongose = require("mongoose");
 
 //creates cart schema
-const cartSchema = moongose.Schema({
-
-    
+const cart_schema = moongose.Schema({
+  
     orders:[],
     date: String,
     time: String,
@@ -13,4 +12,4 @@ const cartSchema = moongose.Schema({
 
 })
 
-module.exports = moongose.model("cart-collection", cartSchema);
+module.exports = moongose.model("cart-collection", cart_schema);

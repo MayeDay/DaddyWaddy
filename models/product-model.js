@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 //creates a Schema for products
-exports = productSchema = mongoose.Schema({
+exports = product_schema = mongoose.Schema({
    
     category: String,
     name: String,
@@ -12,6 +12,7 @@ exports = productSchema = mongoose.Schema({
 })
 
 //exports the model of the product schema
-module.exports.model = mongoose.model("prod-dbs", productSchema);
+module.exports.model = mongoose.model("prod-dbs", product_schema);
+
 //exports the product schema
-module.exports.Schema = productSchema;
+module.exports.Schema = product_schema;
