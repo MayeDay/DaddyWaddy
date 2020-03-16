@@ -3,7 +3,10 @@ const mongoose = require("mongoose");
 //creates a Schema for products
 exports = product_schema = mongoose.Schema({
    
-    category: String,
+    category: {
+        type: String,
+        required: [true, "Must provide a food category"]
+    },
     name: String,
     description: String,
     price: Number,

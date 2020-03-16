@@ -3,7 +3,6 @@ const order_model = require("../models/order-model");
 const product = require("../models/product-model");
 const user_model = require("../models/user-model");
 const product_model = product.model;
-const product_schema = product_model.Schema;
 
 
 

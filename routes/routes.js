@@ -12,6 +12,8 @@ const router = express.Router();
 //Routes
 router.post("/newuser", login_controller.signup);
 router.post("/login", login_controller.login);
+router.put("/updateuser/:id", login_controller.updateUser);
+
 
 router.post("/newproduct", product_controller.newProduct);
 router.get("/product/:id", product_controller.product);

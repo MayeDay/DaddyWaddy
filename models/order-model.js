@@ -4,8 +4,16 @@ const product_model = require("./product-model");
 //Creates a order Schema
 const order_schema = mongoose.Schema({
     //the item Required will be another Schema of Product
-    item: product_model.Schema,
-    quantity: Number,
+    
+    item:{
+        type: product_model.Schema,
+        required: [true, "First name field is required!"]
+    },
+    quantity: {
+        type: Number,
+        required: [true, "Must provide amount of produce"]
+    },
+    
     userId: String
 })
 

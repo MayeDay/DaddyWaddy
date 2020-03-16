@@ -3,11 +3,30 @@ const mongoose = require("mongoose");
 //Information for the user
 const user_schema = mongoose.Schema({
 
-    firstname: String,
-    lastname: String,
+    firstname: {
+        type: String,
+        required: [true, "First name field is required!"]
+    },
+    lastname: {
+        type: String,
+        required: [true, "Last name field is required!"]
+    },
     contactnumber:String,
-    email: String,
-    password: String
+
+    email: {
+        type: String,
+        required: [true, "Email field is required!"]
+    },
+
+    password: {
+        type: String,
+        required: [true, "Password field is required!"]
+    },
+
+    status: {
+        type: Boolean,
+        
+    }
 })
 
 //exports the model of the schema
