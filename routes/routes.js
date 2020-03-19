@@ -1,7 +1,7 @@
 //import need modules
 const express = require("express");
 
-//Imports created Models for the mongoDB being used
+//Imports created controllers
 const login_controller = require("../controllers/login-controller");
 const product_controller = require("../controllers/product-controller");
 const order_controller = require("../controllers/order-controller");
@@ -13,7 +13,7 @@ const router = express.Router();
 router.post("/newuser", login_controller.signup);
 router.post("/login", login_controller.login);
 router.put("/updateuser/:id", login_controller.updateUser);
-
+router.put("/deactivateuser", login_controller.deactivateUser);
 
 router.post("/newproduct", product_controller.newProduct);
 router.get("/product/:id", product_controller.product);
