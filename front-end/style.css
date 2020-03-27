@@ -1,20 +1,182 @@
+*{
+    margin: 0;
+    padding: 0%;
+    font-family: 'Pacifico', cursive;
+    
 
-.header{
+}
+
+body{
+    background-color: #747d90;
+
+}
+.container{
+    width: 92%;
+    margin: auto;
+}
+
+.nav-bar{
+
+    background-color: #cc2c11;
+    float: left;
+    height: 70px;
+    width: 100%;
+
+}
+
+.main-menu{
+
+    background-color: rgb(121, 39, 1);
+    
+    border: rgb(87, 27, 0) solid 10px;
+
+
+    width: 25%;
+    height: 2500px;
+    float: left;
+}
+
+
+.logo{
+    background-image: url("./images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10%;
+    margin-left: 13%;
+    width: 75%;
+    height: 270px;
+    float: left;
+
+}
+
+.title{
+
+    color: white;
+    font-size: 150%;
+    display: inline-block;
+    width: 100%;
+    
+}
+
+.title h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+.selections{
 
     width: 100%;
-    height: 20%;
-
-}
-
-.header ul{
-    list-style: none;
-
-}
-
-.header ul li{
-
     float: left;
-    margin: 20px;
-    padding: 20px;
-    background-color: brown;
+}
+
+.selections ul{
+    list-style: none;
+    margin-top: 10%;
+    
+}
+
+.selections ul li{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+}
+
+.selections ul li img{
+    
+}
+
+.selections ul li a{
+    display: block;
+    font-size: 250%;
+    text-decoration: none;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    background-color: rgb(121, 39, 1);
+    text-align: center;
+    font-weight: bolder;
+    color: black;
+
+    border-top: rgb(87, 27, 0) solid 5px;
+    border-bottom: rgb(87, 27, 0) solid 5px;
+
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+
+    
+}
+.selections ul li a:hover{
+
+    
+    background-color: #0a0944;
+    border-radius: 30%;
+    transition-duration: 1s;
+
+
+}
+
+
+
+.slider {
+    background-image: url("./images/main_image.jpg");
+    background-color: antiquewhite;
+    box-shadow: inset bottom 30px 30px 30px 50px rgb(5, 5, 5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10% 10% 10% 10%;
+    
+    width: 96%;
+    height: 700px;
+    margin-left: 2%;
+    margin-top: 10px;
+    float: left;
+    
+}
+
+.slider h1{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20%;
+    color: white;
+    font-size: 300%;
+
+
+}
+
+
+.slider:hover{
+    opacity: 1;
+    box-shadow: inset 0px 0px 0px 0px rgb(5, 5, 5);
+
+
+}
+
+.items{
+    width: 72%;
+    background-color: rgb(10, 9, 9);
+    float: left;
+
+}
+.order-item{
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 47%;
+    height: 500px;
+    background-color: rgb(121, 39, 1);
+    float: left;
+    border-radius: 10%;
+}
+
+.burger{
+    width: 100%;
+    height: inherit;
+    float: left;
+    background-image: url("./images/burger.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+    opacity: .7;
 }

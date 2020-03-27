@@ -12,7 +12,9 @@ exports.const = {
 
 exports.database = {
     "DATABASE":{
-        "PASSWORD": "P@$$W0rd",
-        "DB_NAME": "sample_db"
+        "PASSWORD": "P@$$$W0rd",
+        "DB_NAME": "sample_db",
+        "DB_LINK": "mongodb+srv://User:auth@cluster0-efwmb.mongodb.net/dbname?retryWrites=true&w=majority"
+    
     }
 }

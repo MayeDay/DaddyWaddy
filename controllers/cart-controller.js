@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const cart_model = require("../models/cart-model");
 const order_model = require("../models/order-model");
+const user_model = require("../models/user-model");
 
 
 //Post funtion for adding user orders to the cart after they are finished provide the user _id in the search 
@@ -32,7 +33,8 @@ exports.addToCart = ((req, res, next)=>{
                 Payment_Method: req.body.Payment_Method,
                 
             })
-           cart.save();
+           cart.save()
+        
            res.send(cart);
         } 
     }) 

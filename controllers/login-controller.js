@@ -99,6 +99,8 @@ exports.deactivateUser = ((req, res, next) =>{
         user_model.findOne({_id: req.body.id}).then((person)=>{
             res.send(person);
         })
+    }).catch(err =>{
+        res.send(err);
     })
 
 });

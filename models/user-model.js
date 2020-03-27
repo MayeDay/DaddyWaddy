@@ -26,7 +26,9 @@ const user_schema = mongoose.Schema({
     status: {
         type: Boolean,
         
-    }
+    },
+
+    orderhistory: []
 })
 
 //exports the model of the schema
