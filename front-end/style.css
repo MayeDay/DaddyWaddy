@@ -17,26 +17,53 @@ body{
 
 .nav-bar{
 
-    background-color: #747d9063;
+    background-color: #747d90ce;
     border-bottom: black solid 2px;
     float: left;
     height: 3.5rem;
     width: 100%;
     text-align: none;
     list-style: none;
+    position: fixed;
 
     
+}
+
+.signIn{
+    background-color: chartreuse;
+
+
 }
 
 .signIn li{
     list-style: none;
     display: inline-block;
     float: right;
-    margin-right: 5%;
+    width: 10%;
+    height: 26px;
+    margin-right: 4%;
+    margin-left:.5%;
+
+
+    
+
+}
+
+.signIn li a:hover{
+    background-color: brown;
+    color: wheat;
 }
 
 
 .signIn li a{
+    width: 141.7%;
+    height: 2.37em;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    border-left: black solid 5px;
+    text-align: center;
+    font-size: x-large;
     
 }
 
