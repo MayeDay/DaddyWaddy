@@ -110,8 +110,7 @@ body{
 .selections ul li a:hover{
 
     
-    background-color: #0a0944;
-    border-radius: 30%;
+    background-color: #145b9c;
     transition-duration: 1s;
 
 
@@ -167,16 +166,110 @@ body{
     height: 500px;
     background-color: rgb(121, 39, 1);
     float: left;
+
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 10%;
+    opacity: 1;
 }
 
 .burger{
     width: 100%;
     height: inherit;
-    float: left;
+    float: inherit;
     background-image: url("./images/burger.jpg");
+    background-size: inherit;
+    background-repeat: inherit;
+    border-radius: inherit;
+    opacity: 1;
+
+}
+
+.burger:hover{
+    opacity: .7;
+    transition-duration: 1s;
+}
+
+.pizza{
+
+    width: 100%;
+    height: inherit;
+    float: left;
+    background-image: url("./images/pizza.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: inherit;
+    opacity: 1;
+}
+
+.pizza:hover{
+
     opacity: .7;
+    transition-duration: 1s;
+}
+
+
+.dessert{
+
+    width: 100%;
+    height: inherit;
+    float: left;
+    background-image: url("./images/dessert.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+    opacity: 1;
+
+
+}
+
+.dessert:hover{
+
+    opacity: .7;
+    transition-duration: 1s;
+
+}
+
+.steak{
+
+    width: 100%;
+    height: inherit;
+    float: left;
+    background-image: url("./images/steak.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+    opacity: 1;
+
+}
+
+.steak:hover{
+
+    opacity: .7;
+    transition-duration: 1s;
+
+}
+
+.pasta{
+
+    width: 100%;
+    height: inherit;
+    float: left;
+    background-image: url("./images/pasta.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+    opacity: 1;
+
+}
+
+.pasta:hover{
+
+    opacity: .7;
+    transition-duration: 1s;
+
+
 }
