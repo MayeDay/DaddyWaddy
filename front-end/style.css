@@ -17,14 +17,57 @@ body{
 
 .nav-bar{
 
-    background-color: black;
+    background-color: #747d9063;
+    border-bottom: black solid 2px;
     float: left;
-    height: 3rem;
+    height: 3.5rem;
     width: 100%;
-    
+    text-align: none;
+    list-style: none;
 
+    
 }
 
+.signIn li{
+    list-style: none;
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+}
+
+
+.signIn li a{
+    
+}
+
+.daddyWaddy li{
+    float: left;
+    list-style: none;
+    height: 50px;
+    display: block;
+}
+
+.daddyWaddy li a{
+    text-decoration: none;
+    color: black;
+    font-size: 150%;
+}
+
+.main_title{
+    width: 300px;
+    margin-left: .5%;
+
+
+}
+.pic{
+    width: 50px;
+    margin-left: 4.5%;
+    background-image: url("./images/logo_clear.png"), url("./images/new_food.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, cover;
+    border-radius: 50%;
+
+}
 .main-menu{
 
     background-color: rgb(121, 39, 1);
@@ -142,7 +185,7 @@ body{
     padding-bottom: 23px;
     background-color: rgb(121, 39, 1);
     text-align: center;
-    color: white;
+    color: black;
 
     border-top: rgb(87, 27, 0) solid 5px;
     border-bottom: rgb(87, 27, 0) solid 5px;
@@ -155,15 +198,21 @@ body{
 }
 
 .home_li a{
-    background-image: url("./images/new_food.jpg");
+    background-image: url("./images/seasoning.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
    
 }
+
+.home_li a:hover{
+    opacity: 0.3;
+    transition-duration: 1s;
+}
+
 .selections ul li a:hover{
 
-    color: black;
+    color: white;
     background-color: #cc2c11;
     transition-duration: 1s;
     
@@ -204,11 +253,42 @@ body{
 
 
 }
+.menu_title{
+
+    float: left;
+    width: 90%;
+    height: 6em;
+    margin-left: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-image: url("./images/pepper.jpg");
+    background-position: center;
+    border-radius: 15%;
+   
+
+}
+
+.menu_title h2{
+    width: 50%;
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: black;
+    background-image: url("./images/flames.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1.15em;
+    border-left: rgb(87, 27, 0) double 20px;
+    border-right: rgb(87, 27, 0) double 20px;
+    margin-left: 7.5em;
+
+}
 
 .items{
     width: 72%;
     height: 142.3rem;
-    background-color: rgba(92, 46, 46, 0.582);
+    background-color: rgb(17, 15, 15);
     float: left;
 
 }
@@ -216,8 +296,8 @@ body{
     margin-left: 2%;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 47%;
-    height: 500px;
+    width: 30%;
+    height: 20em;
     background-color: rgb(121, 39, 1);
     float: left;
 
