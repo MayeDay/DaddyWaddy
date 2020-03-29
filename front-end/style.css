@@ -52,6 +52,7 @@ body{
 .signIn li a:hover{
     background-color: brown;
     color: wheat;
+    transition: .5s;
 }
 
 
@@ -61,7 +62,7 @@ body{
     text-decoration: none;
     display: inline-block;
     color: black;
-    border-left: black solid 5px;
+    border-left: black dotted 5px;
     text-align: center;
     font-size: x-large;
     
@@ -98,13 +99,11 @@ body{
 .main-menu{
 
     background-color: rgb(121, 39, 1);
-    
     border: rgb(87, 27, 0) solid 10px;
-
-
     width: 25%;
     height: 141rem;
     float: left;
+    
 }
 
 
@@ -123,7 +122,7 @@ body{
 
 .title{
 
-    color: white;
+    color: rgb(255, 251, 0);
     font-size: 150%;
     display: inline-block;
     width: 95%;
@@ -155,20 +154,12 @@ body{
     text-align: center;
     width: 100%;
     height: 100px;
-   
 }
 
 .home_icon{
     float: left;
     width: 3%;
     height: 5rem;
-    background-image: url("./images/black_house.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    margin-left: 2%;
-    margin-bottom: 20%;
-    margin-top: .5%;
 }
 
 .menu_icon{
@@ -176,15 +167,6 @@ body{
     float: left;
     width: 3%;
     height: 5rem;
-    background-image: url("./images/menu2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    margin-left: 2%;
-    margin-bottom: 20%;
-    margin-top: .5%;
-
-
 }
 
 .cart_icon{
@@ -192,17 +174,14 @@ body{
     float: left;
     width: 3%;
     height: 5rem;
-    background-image: url("./images/shopping-cart.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    margin-left: 2%;
-    margin-bottom: 20%;
-    margin-top: .5%;
-
 }
 
+.logout_icon{
+    float: left;
+    width: 3%;
+    height: 5rem;
 
+}
 
 .selections ul li a{
     display: block;
@@ -212,8 +191,7 @@ body{
     padding-bottom: 23px;
     background-color: rgb(121, 39, 1);
     text-align: center;
-    color: black;
-
+    color: rgb(255, 251, 0);
     border-top: rgb(87, 27, 0) solid 5px;
     border-bottom: rgb(87, 27, 0) solid 5px;
 
@@ -225,16 +203,80 @@ body{
 }
 
 .home_li a{
-    background-image: url("./images/seasoning.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-   
+    background-image: url("./images/black_house.png"), url("./images/seasoning.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 25%, cover;
+    background-position: left, center;
+    background-blend-mode: normal, exclusion;
+    
 }
 
+
+
+
 .home_li a:hover{
-    opacity: 0.3;
+    color: rgb(0, 0, 0);
+
+    background-image: url("./images/white_house.png"), url("./images/seasoning.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 25%, cover;
+    background-position: left, center;
+    background-blend-mode: normal, normal;
+    transition-duration:1s ;
+
+}
+
+.order a{
+    background-image: url("./images/menu2.png"), url("./images/note2.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 25%, cover;
+    background-position: left center, center;
+    background-position-x: 3%;
+    background-blend-mode: normal, exclusion;
+
+
+
+}
+
+.order a:hover{
+
+    color: rgb(255, 255, 255);
     transition-duration: 1s;
+
+    background-image: url("./images/menu2_white.png"), url("./images/note2.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 25%, cover;
+    background-position: left, center;
+    background-position-x: 3%;
+    background-blend-mode: normal, normal;
+
+
+
+}
+
+.cart_li a{
+
+    background-image: url("./images/shopping-cart.png"), url("./images/cart1.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 25%, cover;
+    background-position: left center, center;
+    background-position-x: 3%;
+    background-blend-mode: normal, exclusion;
+
+}
+
+.cart_li a:hover{
+
+    color: rgb(255, 255, 255);
+    transition-duration: 1s;
+
+    background-image: url("./images/shopping-cart-white.png"), url("./images/cart1.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 25%, cover;
+    background-position: left, center;
+    background-position-x: 3%;
+    background-blend-mode: normal, normal;
+
 }
 
 .selections ul li a:hover{
@@ -243,6 +285,19 @@ body{
     background-color: #cc2c11;
     transition-duration: 1s;
     
+}
+
+.logout a{
+
+    background-image: url("./images/logout.png"), url("./images/note1.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 25%, cover;
+    background-position: left center, center;
+    background-position-x: 3%;
+    background-blend-mode: normal, exclusion;
+
+
+
 }
 
 
@@ -267,8 +322,10 @@ body{
     text-align: center;
     font-weight: bold;
     margin-top: 20%;
-    color: white;
+    color: rgb(255, 251, 0);
     font-size: 500%;
+    font-style: italic;
+    text-decoration: underline;
 
 
 }
