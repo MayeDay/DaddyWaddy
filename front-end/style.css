@@ -296,7 +296,16 @@ body{
     background-position-x: 3%;
     background-blend-mode: normal, exclusion;
 
+}
 
+.logout a:hover{
+
+    background-image: url("./images/logout-white.png"), url("./images/note1.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 25%, cover;
+    background-position: left center, center;
+    background-position-x: 3%;
+    background-blend-mode: normal, normal;
 
 }
 
